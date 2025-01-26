@@ -1,6 +1,7 @@
 # Setting up a dev container for Golang!
 
 * Primary author: [Onyi Igwe](https://github.com/igtricia)
+* Reviewer: [Betsy George](https://github.com/betsygeo)
 
 # Prerequisites
 Before we start, make sure you have the following prequisites down:
@@ -77,13 +78,20 @@ git push --set-upstream origin main
 
 (5) Reopen the project in the container by pressing Ctrl+Shift+P for Windows(or Cmd+Shift+P on Mac), typing "Dev Containers: Reopen in Container," and selecting the option.
 
-Once your dev container setup completes, close the current terminal tab (trash can), open a new terminal pane within VSCode, and try running 'go-version' to see your dev container is running a recent version of Go without much effort! (As of this writing: 1.23.5 released in January of 2025.)
+!!! note "Note"
+    Once your dev container setup completes, close the current terminal tab (trash can), open a new terminal pane within VSCode, and try running 'go-version' to see your dev container is running a recent version of Go without much effort! (As of this writing: 1.23.5 released in January of 2025.)
 
 # Part 3 Build Your Hello World Project(- Possibly Your First Project with Golang! Hurray!)
 Run the following commands in your terminal(inside the dev container)
-(1) mkdir HelloCOMP423
 
-(2) cd HelloCOMP423
+(1) Make a directory
+    ```
+    mkdir HelloCOMP423
+    ```
+(2) cd into the directory
+    ```
+    HelloCOMP423
+    ```
 
 (3) When your code imports packages contained in other modules, you manage those dependencies through your code's own module. That module is defined by a go.mod file that tracks the modules that provide those packages. That go.mod file stays with your code, including in your source code repository. To enable dependency tracking for your code by creating a go.mod file, run the go mod init command, giving it the name of the module your code will be in.So, essentially we are creating a go module below:
 ```
@@ -117,7 +125,7 @@ After running this command in your terminal, an executable 'main' file will be c
 ```
 go run main.go
 ```
-
-The key difference between go run and go build is that go run compiles and immediately executes the code, while go build only compiles the code and creates an executable file in the current directory that you can run separately later as shown above.
+!!! note "What's the key difference"
+    The key difference between go run and go build is that go run compiles and immediately executes the code, while go build only compiles the code and creates an executable file in the current directory that you can run separately later as shown above.
 
 Alright-Congratulations! You have successfully setup your own Go development environment and written a program! Give yourself a pat on the back- and go out for a drink. 
