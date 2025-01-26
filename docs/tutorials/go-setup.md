@@ -88,10 +88,10 @@ Run the following commands in your terminal(inside the dev container)
 (3) When your code imports packages contained in other modules, you manage those dependencies through your code's own module. That module is defined by a go.mod file that tracks the modules that provide those packages. That go.mod file stays with your code, including in your source code repository. To enable dependency tracking for your code by creating a go.mod file, run the go mod init command, giving it the name of the module your code will be in.So, essentially we are creating a go module below:
 ```
 go mod init HelloCOMP423
-
 ```
 (4) In VSCode, create a file called main.go and save it. Write the following code in your file. 
 ```go
+
 package main
 
 import "fmt"
@@ -100,17 +100,7 @@ func main() {
     fmt.Println!("Hello COMP423");
 }
 ```
-(5) Update the main.rs File in the default location src/main.rs with the code snippet below
-```go
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println!("Hello COMP423");
-}
-```
-(6) You can choose either of the follwoing options for the next step/running your code
+(5) You can choose either of the following options for the next step/running your code
 
 * Build and run manually using the go build subcommand: This is the equivalent to the gcc command used to compile a C program and generate an executable file. The go build subcommand essentially compiles your project and generates the executable in the target/debig directory and is useful when you are only interested in building without immediately running, for example, during a deployment process.
 
@@ -120,6 +110,7 @@ go build main.go
 After running this command in your terminal, an executable 'main' file will be created. To run the executable main file, type in this code.
 ```
 ./main
+```
 
 * Run Directly using the go run command that compiles and runs the main.go file in a singular step.
 
